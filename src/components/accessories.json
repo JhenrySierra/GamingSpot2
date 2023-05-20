@@ -1,0 +1,364 @@
+{
+    "accessories": [
+        {
+            "id": 1,
+            "name": "Gaming Mouse 1",
+            "description": "This is a high-performance gaming mouse with customizable RGB lighting.",
+            "price": 59.99,
+            "image": "https://images.pexels.com/photos/7091930/pexels-photo-7091930.jpeg?auto=compress&cs=tinysrgb&w=1600",
+            "quantity": 10,
+            "category": "Mouse"
+        },
+        {
+            "id": 2,
+            "name": "Gaming Mouse 2",
+            "description": "This is a wireless gaming mouse with high precision and long battery life.",
+            "price": 69.99,
+            "image": "https://assets-prd.ignimgs.com/2022/07/10/wireless-gaming-mouse-2-1657437481494.jpg?width=1280",
+            "quantity": 7,
+            "category": "Mouse"
+        },
+        {
+            "id": 3,
+            "name": "Gaming Mouse 3",
+            "description": "This is a wired gaming mouse with adjustable DPI and six programmable buttons.",
+            "price": 49.99,
+            "image": "https://cdn.shopify.com/s/files/1/0112/1203/0016/products/ONIKUMA-CW902-Wired-Gaming-Mouse-RGB-Optical-Mause-With-Colorful-Lighting-PC-Laptop-Adjustable-DPI-Mechanical-Mouse_1024x1024.png?v=1659924964",
+            "quantity": 10,
+            "category": "Mouse"
+        },
+        {
+            "id": 4,
+            "name": "Gaming Mouse 4",
+            "description": "This is a lightweight gaming mouse with customizable RGB lighting and adjustable DPI.",
+            "price": 39.99,
+            "image": "https://media.gamestop.com/i/gamestop/10164239/Razer-DeathAdder-Essential-Wired-Gaming-Mouse",
+            "quantity": 15,
+            "category": "Mouse"
+        },
+        {
+            "id": 5,
+            "name": "Gaming Mouse 5",
+            "description": "This is a wired gaming mouse with programmable buttons and ergonomic design.",
+            "price": 29.99,
+            "image": "https://gorillagaming.com.au/cdn/shop/products/233120222.jpg?v=1682291557",
+            "quantity": 20,
+            "category": "Mouse"
+        },
+        {
+            "id": 6,
+            "name": "Gaming Mouse 6",
+            "description": "This is a wireless gaming mouse with high precision and rechargeable battery.",
+            "price": 79.99,
+            "image": "https://media.cnn.com/api/v1/images/stellar/prod/210226133221-corsair-dark-core-rgb-pro-wireless-gaming-mouse.jpg?q=w_4024,h_2264,x_0,y_0,c_fill",
+            "quantity": 5,
+            "category": "Mouse"
+        },
+        {
+            "id": 7,
+            "name": "Gaming Mouse 7",
+            "description": "This is a gaming mouse with adjustable weight and RGB lighting.",
+            "price": 89.99,
+            "image": "https://cdns3.thecosmicbyte.com/wp-content/uploads/2022/05/30231000/MAIN-10.jpg.webp",
+            "quantity": 4,
+            "category": "Mouse"
+        },
+        {
+            "id": 8,
+            "name": "Gaming Mouse 8",
+            "description": "This is a wired gaming mouse with 16,000 DPI and customizable RGB lighting.",
+            "price": 119.99,
+            "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6512/6512118cv11d.jpg",
+            "quantity": 2,
+            "category": "Mouse"
+        },
+        {
+            "id": 9,
+            "name": "Gaming Mouse 9",
+            "description": "This is a wireless gaming mouse with low latency and long battery life.",
+            "price": 99.99,
+            "image": "https://i.ytimg.com/vi/96G5y_znKr0/maxresdefault.jpg",
+            "quantity": 6,
+            "category": "Mouse"
+        },
+        {
+            "id": 10,
+            "name": "Gaming Mouse 10",
+            "description": "This is a gaming mouse with customizable RGB lighting and on-board memory.",
+            "price": 69.99,
+            "image": "https://www.howtogeek.com/wp-content/uploads/2017/03/shutterstock_723052858.jpg?height=200p&trim=2,2,2,2",
+            "quantity": 3,
+            "category": "Mouse"
+        },
+        {
+            "id": 11,
+            "name": "Gaming Keyboard 1",
+            "description": "This is a mechanical gaming keyboard with customizable RGB lighting and programmable macro keys.",
+            "price": 99.99,
+            "image": "https://www.cnet.com/a/img/resize/b2ffcfd31dd630e249ee3b06b89124cd47ae67d4/hub/2019/08/20/db2c8f57-f31e-4995-99e3-50f2c7ce49e3/gaming-keyboards-200-01.jpg?auto=webp&fit=crop&height=675&width=1200",
+            "quantity": 8,
+            "category": "Keyboard"
+        },
+        {
+            "id": 12,
+            "name": "Gaming Keyboard 2",
+            "description": "This is a wireless gaming keyboard with low latency and long battery life.",
+            "price": 129.99,
+            "image": "https://www.energysistem.com/cdnassets/products/45210/rear_2000.jpg",
+            "quantity": 5,
+            "category": "Keyboard"
+        },
+        {
+            "id": 13,
+            "name": "Gaming Keyboard 3",
+            "description": "This is a membrane gaming keyboard with anti-ghosting and spill-resistant design.",
+            "price": 69.99,
+            "image": "https://i.dell.com/is/image/DellContent//content/dam/images/products/electronics-and-accessories/dell/keyboards/aw410k/aw410k-ckb-rf-gy.psd?fmt=pjpg&pscan=auto&scl=1&wid=3422&hei=2468&qlt=100,1&resMode=sharp2&size=3422,2468&chrss=full&imwidth=5000",
+            "quantity": 10,
+            "category": "Keyboard"
+        },
+        {
+            "id": 14,
+            "name": "Gaming Keyboard 4",
+            "description": "This is a mechanical gaming keyboard with customizable RGB lighting and wrist rest.",
+            "price": 149.99,
+            "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/input-devices/dell/keyboards/aw420k/media-gallery/keyboard-aw420k-xkb-05-bk-gallery-01.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=1389&qlt=100,1&resMode=sharp2&size=1389,402&chrss=full",
+            "quantity": 3,
+            "category": "Keyboard"
+        },
+        {
+            "id": 15,
+            "name": "Gaming Keyboard 5",
+            "description": "This is a wireless gaming keyboard with mechanical switches and customizable RGB lighting.",
+            "price": 199.99,
+            "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/716tjcgSkiL.jpg",
+            "quantity": 2,
+            "category": "Keyboard"
+        },
+        {
+            "id": 16,
+            "name": "Gaming Keyboard 6",
+            "description": "This is a mechanical gaming keyboard with hot-swappable switches and customizable RGB lighting.",
+            "price": 129.99,
+            "image": "https://www.digitaltrends.com/wp-content/uploads/2022/07/corsair-k70-pro-mini-review-7.jpg?p=1",
+            "quantity": 6,
+            "category": "Keyboard"
+        },
+        {
+            "id": 17,
+            "name": "Gaming Keyboard 7",
+            "description": "This is a membrane gaming keyboard with customizable RGB lighting and volume wheel.",
+            "price": 59.99,
+            "image": "https://www.zdnet.com/a/img/resize/a4114cb2321e5dfab90cc14b618c65740116d9b6/2021/10/29/115c21f7-63c1-4e2a-8b41-32a8a9d9c384/razer-huntsman-v2.jpg?auto=webp&fit=crop&height=1200&width=1200",
+            "quantity": 12,
+            "category": "Keyboard"
+        },
+        {
+            "id": 18,
+            "name": "Gaming Keyboard 8",
+            "description": "This is a mechanical gaming keyboard with customizable RGB lighting and detachable wrist rest.",
+            "price": 179.99,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSoB89lcqsCu2VcGJpqqVXA_f2n8h3P-BBjQ&usqp=CAU",
+            "quantity": 4,
+            "category": "Keyboard"
+        },
+        {
+            "id": 19,
+            "name": "Gaming Keyboard 9",
+            "description": "This is a wireless gaming keyboard with mechanical switches and programmable macro keys.",
+            "price": 249.99,
+            "image": "https://www.cnet.com/a/img/resize/05a420904c83804968918b616ce2c16c05527f3b/hub/2020/04/11/58efcce2-be76-4e0a-95c6-522320ed1c31/pictek-gaming-keyboard.jpg?auto=webp&fit=crop&height=675&width=1200",
+            "quantity": 1,
+            "category": "Keyboard"
+        },
+        {
+            "id": 20,
+            "name": "Gaming Keyboard 10",
+            "description": "This is a mechanical gaming keyboard with customizable RGB lighting and media controls.",
+            "price": 159.99,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8R_61hxAcw4rfCA0T9GpZt-lNnNVKNiqwkg&usqp=CAU",
+            "quantity": 2,
+            "category": "Keyboard"
+        },
+        {
+            "id": 21,
+            "name": "Gaming Chair 1",
+            "description": "This is a racing-style gaming chair with adjustable armrests and lumbar support.",
+            "price": 249.99,
+            "image": "https://media.istockphoto.com/id/1305168473/photo/all-angels-view-of-black-and-yellow-office-chair-isolated-on-white.jpg?b=1&s=612x612&w=0&k=20&c=9WYbI3e8XS7GeOT7ud5ohPpzK0qqYfee8q82dwAVY4c=",
+            "quantity": 7,
+            "category": "Chair"
+        },
+        {
+            "id": 22,
+            "name": "Gaming Chair 2",
+            "description": "This is a mesh-back gaming chair with adjustable headrest and footrest.",
+            "price": 329.99,
+            "image": "https://i5.walmartimages.com/asr/096b1dca-a0e7-4de1-8e40-3fa06ae11793.957a95e71bd9bcb2d7e7bc73d882b73e.jpeg",
+            "quantity": 4,
+            "category": "Chair"
+        },
+        {
+            "id": 23,
+            "name": "Gaming Chair 3",
+            "description": "This is a faux leather gaming chair with adjustable lumbar support and tilt angle.",
+            "price": 199.99,
+            "image": "https://cdn.shopify.com/s/files/1/0087/3306/5252/products/02._5134801.jpg?v=1666984531",
+            "quantity": 8,
+            "category": "Chair"
+        },
+        {
+            "id": 24,
+            "name": "Gaming Chair 4",
+            "description": "This is a high-back gaming chair with adjustable armrests and neck pillow.",
+            "price": 299.99,
+            "image": "https://ak1.ostkcdn.com/images/products/is/images/direct/4bebfee2773ada8967d15a81fb1f5bab7fe56402/Reclining-Adjustable-Gaming-Chair.jpg",
+            "quantity": 5,
+            "category": "Chair"
+        },
+        {
+            "id": 25,
+            "name": "Gaming Chair 5",
+            "description": "This is a racing-style gaming chair with 4D adjustable armrests and tilt angle.",
+            "price": 399.99,
+            "image": "https://www.bigw.com.au/medias/sys_master/images/images/h78/h23/34131547291678.jpg",
+            "quantity": 2,
+            "category": "Chair"
+        },
+        {
+            "id": 26,
+            "name": "Gaming Chair 6",
+            "description": "This is a mesh-back gaming chair with adjustable lumbar support and headrest.",
+            "price": 259.99,
+            "image": "https://images.thdstatic.com/productImages/fec0a354-c1d0-40f6-bba6-a22a01a4e702/svn/green-costway-gaming-chairs-hw62042gn-64_1000.jpg",
+            "quantity": 6,
+            "category": "Chair"
+        },
+        {
+            "id": 27,
+            "name": "Gaming Chair 7",
+            "description": "This is a faux leather gaming chair with adjustable armrests and tilt angle.",
+            "price": 179.99,
+            "image": "https://m.media-amazon.com/images/I/61rlc+rV6UL._SL1500_.jpg",
+            "quantity": 10,
+            "category": "Chair"
+        },
+        {
+            "id": 28,
+            "name": "Gaming Chair 8",
+            "description": "This is a high-back gaming chair with adjustable lumbar support and neck pillow.",
+            "price": 329.99,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSkRUdmLANB9XBpNZBElFD68MtnkbBcT5f1Q&usqp=CAU",
+            "quantity": 3,
+            "category": "Chair"
+        },
+        {
+            "id": 29,
+            "name": "Gaming Chair 9",
+            "description": "This is a racing-style gaming chair with adjustable armrests and 180-degree recline.",
+            "price": 449.99,
+            "image": "https://www.happybeds.co.uk/cdn-cgi/image/fit=contain,f=auto,width=1000/media/catalog/product/cache/2760f187cb7d1bcdeca5818f247800d3/c/o/comet_chair_1.jpg",
+            "quantity": 1,
+            "category": "Chair"
+        },
+        {
+            "id": 30,
+            "name": "Gaming Chair 10",
+            "description": "This is a faux leather gaming chair with adjustable lumbar support and 180-degree recline.",
+            "price": 219.99,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUDLPNVxIbCCUduoMLe5jVm6thJZ5RC6dipw&usqp=CAU",
+            "quantity": 9,
+            "category": "Chair"
+        },
+        {
+            "id": 31,
+            "name": "Desk Mat 1",
+            "description": "This is a large desk mat with smooth surface and anti-slip bottom.",
+            "price": 19.99,
+            "image": "https://media.steelseriescdn.com/thumbs/filer_public/d3/c4/d3c419a0-df9c-4faa-8ad5-82fda0ced7f1/1200x_buy_qck-prism_m_01.jpg__1850x800_q100_crop-scale_optimize_subsampling-2.webp",
+            "quantity": 20,
+            "category": "Mat"
+        },
+        {
+            "id": 32,
+            "name": "Desk Mat 2",
+            "description": "This is a water-resistant desk mat with stitched edges and non-slip base.",
+            "price": 24.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2016/09/padx-300x300.jpg",
+            "quantity": 15,
+            "category": "Mat"
+        },
+        {
+            "id": 33,
+            "name": "Desk Mat 3",
+            "description": "This is a desk mat with RGB lighting and 8 lighting modes.",
+            "price": 39.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2016/01/G240-300x300.jpg",
+            "quantity": 10,
+            "category": "Mat"
+        },
+        {
+            "id": 34,
+            "name": "Desk Mat 4",
+            "description": "This is a desk mat with extra-large size and smooth surface.",
+            "price": 29.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2020/06/4680_800-300x300.jpg",
+            "quantity": 18,
+            "category": "Mat"
+        },
+        {
+            "id": 35,
+            "name": "Desk Mat 5",
+            "description": "This is a desk mat with extended width and soft surface.",
+            "price": 21.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2020/07/Pad_HyperX_Fury_S_Pro_Small_290mm_x_240mm-300x300.jpg",
+            "quantity": 22,
+            "category": "Mat"
+        },
+        {
+            "id": 36,
+            "name": "Desk Mat 6",
+            "description": "This is a desk mat with water-resistant surface and non-slip base.",
+            "price": 17.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2019/09/2018041918381969_src-300x300.jpg",
+            "quantity": 25,
+            "category": "Mat"
+        },
+        {
+            "id": 37,
+            "name": "Desk Mat 7",
+            "description": "This is a desk mat with large size and smooth surface.",
+            "price": 14.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2020/03/hx-product-mousepad-fury-s-speed-xlarge-hxmpfs-1-zm-lg-300x300.jpg",
+            "quantity": 30,
+            "category": "Mat"
+        },
+        {
+            "id": 38,
+            "name": "Desk Mat 8",
+            "description": "This is a desk mat with stitched edges and water-resistant surface.",
+            "price": 26.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2020/03/hx-product-mousepad-fury-s-speed-curl-2-zm-lg-300x300.jpg",
+            "quantity": 12,
+            "category": "Mat"
+        },
+        {
+            "id": 39,
+            "name": "Desk Mat 9",
+            "description": "This is a desk mat with anti-slip bottom and soft surface.",
+            "price": 18.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2020/08/26-300x300.jpg",
+            "quantity": 28,
+            "category": "Mat"
+        },
+        {
+            "id": 40,
+            "name": "Desk Mat 10",
+            "description": "This is a desk mat with non-slip base and smooth surface.",
+            "price": 22.99,
+            "image": "https://hardcorecomputacion.com.ar/wp-content/uploads/2020/10/D_614400-MLA43600450318_092020-O.jpg",
+            "quantity": 24,
+            "category": "Mat"
+        }
+    ]
+}
