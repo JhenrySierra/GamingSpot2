@@ -18,7 +18,7 @@ const QuantitySelector = ({ addToCart, accessory }) => {
     };
 
     return (
-        <div>
+        <div className='quantitySelector'>
             <button onClick={handleDecrease} className='quantitySelectorBtn'>-</button>
             <span>{quantity}</span>
             <button onClick={handleIncrease} className='quantitySelectorBtn'>+</button>

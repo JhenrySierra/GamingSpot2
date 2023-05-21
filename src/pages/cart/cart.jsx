@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
+
 export const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+
+
+
+  const checkout = () => {
+    console.log("checkout");
+  };
 
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem('cartItems'));
@@ -28,17 +35,9 @@ export const Cart = () => {
     localStorage.removeItem('cartItems');
   };
 
-  const checkout = () => {
-    // Perform the checkout logic here
-    // e.g., redirect to a payment page or show a success message
-    console.log('Checkout');
-  };
-
-  
-
   return (
     <div className="container">
-      <h2>Cart</h2>
+      <h4>Your Shopping Cart</h4>
       <p>Total Amount: ${totalAmount.toFixed(2)}</p> 
       <button onClick={checkout} className='btn btn-success'>Checkout</button>
       <button onClick={emptyCart} className='btn btn-warning'>Empty Cart</button>
@@ -69,6 +68,3 @@ export const Cart = () => {
     </div>
   );
 };
-
-
-
