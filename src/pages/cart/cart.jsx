@@ -34,12 +34,14 @@ export const Cart = () => {
     console.log('Checkout');
   };
 
+  
+
   return (
     <div className="container">
       <h2>Cart</h2>
       <p>Total Amount: ${totalAmount.toFixed(2)}</p> 
-      <button onClick={checkout}>Checkout</button>
-      <button onClick={emptyCart}>Empty Cart</button>
+      <button onClick={checkout} className='btn btn-success'>Checkout</button>
+      <button onClick={emptyCart} className='btn btn-warning'>Empty Cart</button>
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (

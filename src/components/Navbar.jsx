@@ -1,23 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
 import { CartWidget } from "./CartWidget";
 
-export const Navbar = () => {
+export const CustomNavbar = () => {
     return (
-        <div className='navbar'>
-            <div>
-            <Link to="/" className='logo'>Gaming Spot</Link>
+        <Navbar bg="dark" variant="dark"  expand="lg">
+            <div className="container-fluid">
+                <Navbar.Brand as={Link} to="/" className='logo'>Gaming Spot</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarNavAltMarkup" />
+                <Navbar.Collapse id="navbarNavAltMarkup">
+                    <Nav className="navbar-nav mx-auto">
+                        <Nav.Link as={Link} to="/">Shop Accessories</Nav.Link>
+                        <Nav.Link as={Link} to="/Mouse">Mouse</Nav.Link>
+                        <Nav.Link as={Link} to="/Keyboard">Keyboards</Nav.Link>
+                        <Nav.Link as={Link} to="/Chair">Gaming Chairs</Nav.Link>
+                        <Nav.Link as={Link} to="/Mat">Desk Mats</Nav.Link>
+                    </Nav>
+                <Nav className="ml-auto">
+                    <Nav.Link as={Link} to="/cart">
+                        <CartWidget />
+                    </Nav.Link>
+                </Nav>
+                </Navbar.Collapse>
             </div>
-            <div className='links'>
-                <Link to="/">Shop Accessories</Link>
-                <Link to="/Mouse">Mouse</Link>
-                <Link to="/Keyboard">Keyboards</Link>
-                <Link to="/Chair">Gaming Chairs</Link>
-                <Link to="/Mat">Desk Mats</Link>
-                <Link to="/cart">
-                    <CartWidget />
-                </Link>
-            </div>
-        </div>
-    )
-}
+        </Navbar>
+    );
+};
