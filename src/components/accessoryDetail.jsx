@@ -1,24 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import { useParams,useNavigate } from 'react-router-dom';
-import accessoriesData from './accessories.json';
+import { useParams, useNavigate } from 'react-router-dom';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import QuantitySelector from './QuantitySelector';
 
 export const AccessoryDetail = () => {
     const [accessory, setAccessory] = useState({});
     const { productId } = useParams();
-
-    const navigate = useNavigate()
-
+    const db = getFirestore();
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const selectedAccessory = accessoriesData.accessories.find(
-            accessory => accessory.id === parseInt(productId)
-        );
-        setAccessory(selectedAccessory);
-    }, [productId]);
+        const fetchAccessory = async () => {
+            try {
+                const accessoryDocRef = doc(db, 'accessories', productId);
+                const accessoryDocSnapshot = await getDoc(accessoryDocRef);
+                if (accessoryDocSnapshot.exists()) {
+                    setAccessory({ id: accessoryDocSnapshot.id, ...accessoryDocSnapshot.data() });
+                } else {
+                    console.log('Accessory not found.');
+                }
+            } catch (error) {
+                console.error('Error fetching accessory:', error);
+            }
+        };
+
+        fetchAccessory();
+    }, [db, productId]);
 
     const onBack = () => {
-        navigate(-1)
-    }
+        navigate(-1);
+    };
+
+    const addToCart = (accessory, quantity) => {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const newItem = {
+            accessory: accessory,
+            quantity: quantity
+        };
+        cartItems.push(newItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        console.log(`Added ${quantity} ${accessory.name}(s) to cart.`);
+    };
 
     return (
         <div className="container">
@@ -33,9 +55,8 @@ export const AccessoryDetail = () => {
                         <li><strong>Brand:</strong> {accessory.brand}</li>
                         <li><strong>Price:</strong> ${accessory.price}</li>
                     </ul>
-                    <button className="btn btn-primary">Add to Cart</button>
+                    <QuantitySelector addToCart={addToCart} accessory={accessory} />
                     <button onClick={onBack} className="btn btn-secondary m-2"> Volver </button>
-
                 </div>
             </div>
         </div>

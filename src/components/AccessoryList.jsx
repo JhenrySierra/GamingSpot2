@@ -1,23 +1,39 @@
 import React, { useState, useEffect } from 'react';
-import accessoriesData from './accessories.json';
-import { Link } from 'react-router-dom'
-import QuantitySelector from './QuantitySelector'
+import { Link } from 'react-router-dom';
+import QuantitySelector from './QuantitySelector';
+
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+
 
 export const Accessories = ({ categories }) => {
+    const db = getFirestore()
     const [accessories, setAccessories] = useState([]);
 
     useEffect(() => {
-        setAccessories(accessoriesData.accessories);
-    }, []);
+        const productsDB = collection(db, 'accessories')
 
-    const filteredAccessories = categories && categories.length > 0
-        ? accessories.filter(accessory => categories.includes(accessory.category))
-        : accessories;
+        getDocs(productsDB)
+        .then (accessories => {
+            setAccessories (accessories.docs.map( doc => ( {id: doc.id , ...doc.data()} ) ))
+        })
+
+    }, [db]);
+
+    const addToCart = (accessory, quantity) => {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const newItem = {
+            accessory: accessory,
+            quantity: quantity
+        };
+        cartItems.push(newItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        console.log(`Added ${quantity} ${accessory.name}(s) to cart.`);
+    };
 
     return (
         <div className="container">
             <div className="row">
-                {filteredAccessories.map(accessory => (
+                {accessories.map(accessory => (
                     <div key={accessory.id} className="col-md-3">
                         <div className="card">
                             <img src={accessory.image} className="card-img-top" alt={accessory.name} />
@@ -28,7 +44,7 @@ export const Accessories = ({ categories }) => {
                                     <li className="list-group-item"><strong>Price:</strong> ${accessory.price}</li>
                                 </ul>
                                 <Link to={`/${accessory.category}/${accessory.id}`} className="btn btn-primary m-1">View</Link>
-                                <a href="#" className="btn btn-secondary">Add to Cart</a>
+                                <QuantitySelector addToCart={addToCart} accessory={accessory} />
                             </div>
                         </div>
                     </div>

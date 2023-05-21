@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -40,6 +40,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -50,7 +51,7 @@
   height: 80px;
   background-color: rgb(37, 37, 37);
   display: flex;
-  justify-content:  space-around;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -59,7 +60,7 @@
   color: white;
   margin-left: 30px;
   font-size: 30px;
-  transition: 0.5s all ;
+  transition: 0.5s all;
   font-weight: bold;
 }
 
@@ -68,7 +69,7 @@
 }
 
 
-.links  {
+.links {
   margin-right: 50px;
   display: flex;
   align-items: center;
@@ -79,7 +80,7 @@
   color: white;
   margin-left: 30px;
   font-size: 18px;
-  transition: 0.5s all ;
+  transition: 0.5s all;
   font-weight: 600;
 }
 
@@ -116,5 +117,15 @@
 }
 
 .btn-secondary {
-  border: none
+  border: none;
+  display: block;
+  margin: auto;
+}
+
+.quantitySelectorBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem;
 }
