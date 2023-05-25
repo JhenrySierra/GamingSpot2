@@ -70,7 +70,6 @@ export const Accessories = ({ categories }) => {
                 ))}
             </div>
             <ToastContainer />
-            <CheckoutModal cartItems={cartItems} clearCart={clearCart} />
         </div>
     );
 };
