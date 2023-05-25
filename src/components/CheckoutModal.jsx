@@ -39,7 +39,7 @@ export const CheckoutModal = () => {
         try {
             const docRef = await addDoc(collection(db, collectionName), order);
             alert('Order placed with ID:', docRef.id);
-            // Perform desired action after successfully placing the order
+            // A modal should show up with the order details
             handleClose();
         } catch (error) {
             console.error('Error placing order:', error);

@@ -21,11 +21,17 @@ export const Accessories = ({ categories }) => {
     }, [db]);
 
     const addToCart = (accessory, quantity) => {
-        const newCartItem = {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        const newItem = {
             accessory: accessory,
             quantity: quantity,
         };
-        setCartItems((prevCartItems) => [...prevCartItems, newCartItem]);
+
+        cartItems.push(newItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        setCartItems((prevCartItems) => [...prevCartItems, newItem]);
         const notify = () =>
             toast(`Added ${quantity} ${accessory.name}(s) to cart.`, {
                 position: 'bottom-right',
