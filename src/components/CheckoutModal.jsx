@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export const Example = () => {
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+
+export const CheckoutModal = () => {
     const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
@@ -11,6 +14,9 @@ export const Example = () => {
             setCartItems(storedItems);
         }
     }, []);
+    
+    const db = getFirestore();
+
 
     const [show, setShow] = useState(false);
     const [name, setName] = useState('');
@@ -19,9 +25,26 @@ export const Example = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const handleSaveChanges = () => {
-        // Perform desired action with the collected data
-        console.log(name, email, phone);
+    const handleSaveChanges = async () => {
+        const collectionName = 'orders'; // Replace with your desired collection name
+        const order = {
+            name: name,
+            email: email,
+            phone: phone,
+            totalAmount: totalAmount,
+            cartItems: cartItems,
+            orderDate: new Date().toISOString(),
+        };
+
+        try {
+            const docRef = await addDoc(collection(db, collectionName), order);
+            alert('Order placed with ID:', docRef.id);
+            // Perform desired action after successfully placing the order
+            handleClose();
+        } catch (error) {
+            console.error('Error placing order:', error);
+        }
+    ;
         handleClose();
     };
 
@@ -75,7 +98,7 @@ export const Example = () => {
                         Continue Shopping
                     </Button>
                     <Button variant="success" onClick={handleSaveChanges}>
-                        Save Changes
+                        Place Order
                     </Button>
                 </Modal.Footer>
             </Modal>

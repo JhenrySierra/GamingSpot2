@@ -6,7 +6,10 @@ import { Shop } from './pages/shop/shop';
 import { Cart } from './pages/cart/cart';
 import { ItemListContainer } from "./components/ItemListContainer"
 import { AccessoryDetail } from "./components/accessoryDetail";
-import { Category } from "./components/Category"
+import { Category } from "./components/Category";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -41,6 +44,7 @@ function App() {
         </Routes>
         
       </Router>
+      <ToastContainer />
     </div>
   );
 }
