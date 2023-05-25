@@ -1,49 +1,84 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
+import React, { useEffect, useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-export const CheckoutModal = ({ isOpen, closeModal }) => {
+export const Example = () => {
+    const [cartItems, setCartItems] = useState([]);
 
+    useEffect(() => {
+        const storedItems = JSON.parse(localStorage.getItem('cartItems'));
+        if (storedItems) {
+            setCartItems(storedItems);
+        }
+    }, []);
+
+    const [show, setShow] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
 
-    const handleNameChange = (e) => {
-        setName(e.target.value);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const handleSaveChanges = () => {
+        // Perform desired action with the collected data
+        console.log(name, email, phone);
+        handleClose();
     };
 
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    };
-
-    const handlePhoneChange = (e) => {
-        setPhone(e.target.value);
-    };
-
-    const handleCheckout = () => {
-        // Perform the checkout logic here
-        console.log('Checkout:', name, email, phone);
-
-        // Close the modal after checkout
-        closeModal();
-
-    };
+    const totalAmount = cartItems.reduce(
+        (total, item) => total + item.accessory.price * item.quantity,
+        0
+    );
 
     return (
-        <div>
-            <Modal isOpen={isOpen} onRequestClose={closeModal}>
-                <h2>Checkout</h2>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" value={name} onChange={handleNameChange} required />
+        <>
+            <Button variant="primary" onClick={handleShow}>
+                Checkout
+            </Button>
 
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" value={email} onChange={handleEmailChange} required />
-
-                <label htmlFor="phone">Phone:</label>
-                <input type="tel" id="phone" value={phone} onChange={handlePhoneChange} required />
-
-                <button onClick={handleCheckout}>Submit</button>
-                <button onClick={closeModal}>Cancel</button>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Checkout</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p><strong>Total Amount:</strong> ${totalAmount.toFixed(2)}</p>
+                    <div className="form-group">
+                        <label>Name:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            className="form-control"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Phone Number:</label>
+                        <input
+                            type="tel"
+                            className="form-control"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                        />
+                    </div>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Continue Shopping
+                    </Button>
+                    <Button variant="success" onClick={handleSaveChanges}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
             </Modal>
-        </div>
+        </>
     );
 };

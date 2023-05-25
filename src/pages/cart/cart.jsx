@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react';
-
+import { Example } from '../../components/CheckoutModal'
 
 export const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
-
-
-
-  const checkout = () => {
-    console.log("checkout");
-  };
 
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem('cartItems'));
@@ -24,7 +18,6 @@ export const Cart = () => {
     localStorage.setItem('cartItems', JSON.stringify(updatedItems));
   };
 
-  // Calculate the total amount
   const totalAmount = cartItems.reduce(
     (total, item) => total + item.accessory.price * item.quantity,
     0
@@ -35,12 +28,13 @@ export const Cart = () => {
     localStorage.removeItem('cartItems');
   };
 
+
   return (
     <div className="container">
       <h4>Your Shopping Cart</h4>
-      <p>Total Amount: ${totalAmount.toFixed(2)}</p> 
-      <button onClick={checkout} className='btn btn-success'>Checkout</button>
-      <button onClick={emptyCart} className='btn btn-warning'>Empty Cart</button>
+      <p>Total Amount: ${totalAmount.toFixed(2)}</p>
+      <Example />
+      <button onClick={emptyCart} className="btn btn-warning">Empty Cart</button>
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
