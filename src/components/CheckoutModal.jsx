@@ -41,6 +41,11 @@ export const CheckoutModal = () => {
 
     const handleShowForm = () => setShowForm(true);
 
+    const totalAmount = cartItems.reduce(
+        (total, item) => total + item.accessory.price * item.quantity,
+        0
+    );
+    
     const handleSaveChanges = async () => {
         if (email !== emailConfirmation) {
             setEmailError("Email and Email Confirmation do not match");
@@ -68,10 +73,6 @@ export const CheckoutModal = () => {
         }
     };
 
-    const totalAmount = cartItems.reduce(
-        (total, item) => total + item.accessory.price * item.quantity,
-        0
-    );
 
     return (
         <>

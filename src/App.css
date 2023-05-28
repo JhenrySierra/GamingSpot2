@@ -158,7 +158,7 @@
 .cartWidget p {
   background-color: red;
   color: white;
-  border-radius: 50%;
+  border-radius: 25%;
   width: 20px;
   height: 20px;
   font-size: 12.5px;
