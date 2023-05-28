@@ -4,8 +4,6 @@ import { getFirestore, collection, query, where, getDocs } from 'firebase/firest
 import QuantitySelector from './QuantitySelector';
 import { ToastContainer, toast } from 'react-toastify';
 
-
-
 export const Category = () => {
     const { productCategory } = useParams();
     const db = getFirestore();
@@ -44,8 +42,8 @@ export const Category = () => {
             progress: undefined,
             theme: "dark",
         });
-        notify();    };
-
+        notify();
+    };
 
     return (
         <div className="container">

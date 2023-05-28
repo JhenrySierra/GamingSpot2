@@ -30,7 +30,7 @@ export const Cart = () => {
 
 
   return (
-    <div className="container">
+    <div className="container cartPage">
       <h4>Your Shopping Cart</h4>
       <p>Total Amount: ${totalAmount.toFixed(2)}</p>
       <CheckoutModal />

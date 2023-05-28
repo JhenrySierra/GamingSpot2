@@ -5,7 +5,7 @@ import { CartWidget } from "./CartWidget";
 
 export const CustomNavbar = () => {
     return (
-        <Navbar bg="dark" variant="dark"  expand="lg">
+        <Navbar bg="dark" variant="dark" expand="lg" >
             <div className="container-fluid">
                 <Navbar.Brand as={Link} to="/" className='logo'>Gaming Spot</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarNavAltMarkup" />

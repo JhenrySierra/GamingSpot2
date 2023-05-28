@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import QuantitySelector from './QuantitySelector';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 export const AccessoryDetail = () => {
     const [accessory, setAccessory] = useState({});
@@ -39,8 +41,19 @@ export const AccessoryDetail = () => {
         };
         cartItems.push(newItem);
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        console.log(`Added ${quantity} ${accessory.name}(s) to cart.`);
-    };
+        const notify = () =>
+            toast(`Added ${quantity} ${accessory.name}(s) to cart.`, {
+                position: 'bottom-right',
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: 'dark',
+            });
+        notify();
+        };
 
     return (
         <div className="container">

@@ -5,8 +5,6 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
-import { CheckoutModal } from './CheckoutModal';
-
 export const Accessories = ({ categories }) => {
     const db = getFirestore();
     const [accessories, setAccessories] = useState([]);
@@ -44,11 +42,6 @@ export const Accessories = ({ categories }) => {
                 theme: 'dark',
             });
         notify();
-    };
-
-    const clearCart = () => {
-        setCartItems([]);
-        localStorage.removeItem('cartItems');
     };
 
     return (

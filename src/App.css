@@ -135,7 +135,7 @@
 .btn {
   margin: 1rem;
   margin: auto;
-  
+
 }
 
 .col-md-3 {
@@ -149,3 +149,27 @@
 .card-text {
   height: 60px;
 }
+
+.cartWidget {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.cartWidget p {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12.5px;
+}
+
+.footer {
+  display: flex;
+  background-color: #282c34;
+  height: 3rem;
+  color: white;
+  align-items: center;
+  margin-top: 2rem;
+}
+

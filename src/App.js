@@ -13,6 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { Footer } from "./components/footer";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -45,6 +46,7 @@ function App() {
         
       </Router>
       <ToastContainer />
+      <Footer/>
     </div>
   );
 }

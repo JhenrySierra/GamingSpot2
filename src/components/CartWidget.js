@@ -30,7 +30,7 @@ export const CartWidget = () => {
   };
 
   return (
-    <div>
+    <div className='cartWidget'>
       <p>{cartItemCount}</p>
       <ShoppingCart size={32} color='green' className='cartContainer' />
     </div>
